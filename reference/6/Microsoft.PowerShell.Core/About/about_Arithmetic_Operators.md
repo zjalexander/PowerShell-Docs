@@ -36,8 +36,8 @@ PowerShell supports the following arithmetic operators:
 |Operator|Description|Example|
 |--------|-----------|-------|
 | + |Adds integers; concatenates strings,<br/> concatenates arrays, and hash tables.|`6 + 2`<br />`"file" + "name"`<br />`@(1, "one") + @(2.0, "two")`<br />`@{"one" = 1} + @{"two" = 2}`|
-| - |Subtracts one value from another value.|`6-2`<br />`(get-date).date - 1`|
-| - |Makes a number a negative number.|`-6`|
+| - | Subtracts one value from another value | `6 - 2` |
+| - | Makes a number a negative number | `-6`<br/>`(Get-Date).AddDays(-1)` |
 | * |Multiplies numbers, copies strings and<br/>arrays the specified number of times.|`6 * 2`<br />`"!" * 3`<br />`@("!") * 4`|
 | / |Divides two values.|`6 / 2`|
 | % |Returns the remainder of a division operation.|`7 % 2`|
@@ -412,14 +412,14 @@ Beginning in PowerShell 3.0, the `-shr` (shift-right) and `-shl`
 
 PowerShell supports the following bitwise operators.
 
-|Operator|Description|Example|
-|--------|-----------|-------|
-|`-band` |Bitwise AND|`PS C:> 10 -band 3`<br />`2`|
-|`-bor`  |Bitwise OR (inclusive)|`PS C:> 10 -bor 3`<br />`11`|
-|`-bxor` |Bitwise OR (exclusive)|`PS C:> 10 -bxor 3`<br />`9`|
-|`-bnot` |Bitwise NOT|`PS C:> -bNot 10`<br />`-11`|
-|`-shl`  |Shift-left |`PS C:> 102 -shl 2`<br />`408`|
-|`-shr`  |Shift-right|`PS C:> 102 -shr 1`<br />`51`|
+| Operator | Description            | Expression   | Result |
+| -------- | ---------------------- | ------------ | ------ |
+| `-band`  | Bitwise AND            | `10 -band 3` | 2      |
+| `-bor`   | Bitwise OR (inclusive) | `10 -bor 3`  | 11     |
+| `-bxor`  | Bitwise OR (exclusive) | `10 -bxor 3` | 9      |
+| `-bnot`  | Bitwise NOT            | `-bNot 10`   | -11    |
+| `-shl`   | Shift-left             | `102 -shl 2` | 408    |
+| `-shr`   | Shift-right            | `102 -shr 1` | 51     |
 
 Bitwise operators act on the binary format of a value. For example, the bit
 structure for the number 10 is 00001010 (based on 1 byte), and the bit
